@@ -1,0 +1,24 @@
+﻿<Page
+    x:Class="nguyenXuanHinh_lap3.Pages.TransactionListDisplayPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:nguyenXuanHinh_lap3.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    xmlns:Custom="using:Microsoft.Toolkit.Uwp.UI.Controls"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid BorderThickness="1,1,1,5">
+        <Custom:DataGrid x:ConnectionId='2' x:Name="ListData" HorizontalAlignment="Left" Height="502" Margin="35,193,0,0" VerticalAlignment="Top" Width="726" SelectionMode="Single" Background="#FF1F1F1F" BorderBrush="White"/>
+        <Button x:ConnectionId='3' Content="CreateTransaction" Margin="622,38,0,0" VerticalAlignment="Top"                                  Width="150"/>
+        <TextBox x:ConnectionId='4' x:Name="searchCategory" HorizontalAlignment="Left" Margin="34,15,0,0" Header="Search Category" TextWrapping="Wrap" VerticalAlignment="Top" Width="134"/>
+        <Button x:ConnectionId='5'                        Content="Find by Category" Margin="34,94,0,0" VerticalAlignment="Top" Width="134"/>
+        <DatePicker x:ConnectionId='6' x:Name="startDate" Header="Start Date" DayFormat="{}{day.integer}" MonthFormat="{}{month.integer}" YearFormat="{}{year.abbreviated}" Margin="267,15,0,0" VerticalAlignment="Top"/>
+        <DatePicker x:ConnectionId='7' x:Name="endDate" Header="End Date" DayFormat="{}{day.integer}" MonthFormat="{}{month.integer}" YearFormat="{}{year.abbreviated}" Margin="267,71,0,0" VerticalAlignment="Top"/>
+        <Button x:ConnectionId='8'                                   Content="Find by start date to end date" Margin="267,142,0,0" VerticalAlignment="Top" Width="296" />
+        <TextBlock HorizontalAlignment="Left" Margin="622,95,0,0" Text="Total: " TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18" Width="84"/>
+        <TextBlock x:ConnectionId='9' x:Name="btnTotalMoney" HorizontalAlignment="Left" Margin="748,95,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18" Width="84"/>
+    </Grid>
+</Page>
+
